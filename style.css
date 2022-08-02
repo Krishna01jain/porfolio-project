@@ -159,6 +159,7 @@ body {
 	background-size: cover;
 	background-attachment: local;
 	box-shadow: 1px 1px 20px 2px rgba(60, 59, 59, 0.912);
+	transition: 4;
 }
 
 .info-table {
@@ -250,19 +251,14 @@ th.table-header {
 
 
 .container-fluid1 {
-	width: 100%;
+	width: inherit;
 	height: 120vh;
 	top: -20px;
 	background: linear-gradient(to left, rgba(232, 181, 255, 0.343), rgba(143, 201, 255, 0.264));
 }
 
-.content {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
 .content-domain {
 	list-style: none;
 	align-content: center;
+
 }
