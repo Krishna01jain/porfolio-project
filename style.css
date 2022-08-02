@@ -197,7 +197,7 @@ body {
 
 .table {
 	position: relative;
-	left: 5vw;
+	left: 1vw;
 
 }
 
@@ -214,7 +214,7 @@ info-name p {
 
 .table {
 	font-size: 4vh;
-	margin-left: -7vw;
+	margin-left: -7 vw;
 }
 
 .jain {
@@ -240,7 +240,7 @@ th.table-header {
 
 .geeks {
 	/* caption-side: bottom;  */
-	
+
 }
 
 /* .geeks caption img{
