@@ -164,7 +164,7 @@ body {
 
 .info-table {
 	position: relative;
-	left: 4vw;
+	left: 2vw;
 	top: -8vh;
 	background: linear-gradient(to right, rgba(86, 27, 114, 0.487), rgba(80, 173, 255, 0.37));
 	box-shadow: 1px 1px 20px 2px rgba(112, 145, 255, 0.342);
