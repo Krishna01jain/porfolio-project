@@ -1,0 +1,97 @@
+from tkinter import *
+import tkinter as tk
+from tkinter import filedialog
+import os
+from pygame import mixer
+
+root=Tk()
+root.title('Music player project by TechVidvan')
+root.geometry("920x670+290+85")
+root.configure(bg= "#0f1a2b")
+root.resizable(False, False)
+mixer.init()
+
+def open_folder():
+    path = filedialog.askdirectory()
+    if path:
+        os.chdir(path)
+        songs=os.listdir(path)
+        # print(songs)
+    for songs in songs:
+         if songs.endswith(".mp3"):
+            Playlist.insert(END,songs)
+def play_songs():
+    music_name=Playlist.get(ACTIVE)
+    print(music_name[0:-4])
+    # mixer.music.load(Playlist.get(ACTIVE))
+    # mixer.music.play()
+
+    mixer.init()
+    music_state = StringVar()
+    music_state.set("choose one")
+    mixer.music.load(Playlist.get(ACTIVE))
+    mixer.music.play()
+
+
+# def Add_Music():
+#     path = filedialog.askdirectory()
+#     if path:
+#         os.chdir(path)
+#         songs = os.listdire(path)
+ 
+#         for song in songs:
+#             if song.endswith(".mp3"):
+#                 Playlist.insert(END, song)
+ 
+# def Play_Music():
+#     Music_Name= Playlist.get(ACTIVE)
+#     print(Music_Name[0:-4])
+#     mixer.music.load(Playlist.get(ACTIVE))
+#     mixer.music.play()
+
+#     #icon
+# Icon_Image = PhotoImage(file="logo.png")
+# root.iconphoto(False,Icon_Image = PhotoImage(file="logo.png"))
+ 
+# Top_Image = PhotoImage(file="top.png")
+# Label(root, image=Top_Image, bg="#0f1a2b").pack()
+# [6:49 PM]
+#logo
+# logo_Image = PhotoImage(file="logo.png")
+# logo_Image = logo_Image.subsample(6, 6)
+# Label(root, bg="#0f1a2b").place(x=65, y=115)
+
+
+# Button
+# Button_Play = PhotoImage(file="play.png")
+# Button_Play = Button_Play.subsample(6, 6)
+Button(root, bg="#0f1a2b", bd=0,command=play_songs).place(x=100, y=400)
+ 
+# Button_Stop = PhotoImage(file="stop.png")
+# Button_Stop = Button_Stop.subsample(6, 6)
+Button(root,  bg="#0f1a2b", bd=0, command=mixer.music.stop).place(x=30, y=500)
+ 
+# Button_Resume = PhotoImage(file="resume.png")
+# Button_Resume = Button_Resume.subsample(6, 6)
+Button(root,bg="#0f1a2b", bd=0, command=mixer.music.unpause).place(x=115, y=500)
+ 
+# Button_Pause = PhotoImage(file="pause.png")
+# Button_Pause = Button_Pause.subsample(6, 6)
+Button(root, bg="#0f1a2b", bd=0, command=mixer.music.pause).place(x=200, y=500)
+ 
+#music
+# Menu = PhotoImage(file="menu.png")
+Label(root,   bg="#0f1a2b").pack(padx=10, pady=50, side=RIGHT)
+ 
+Frame_Music = Frame(root, bd=2, relief = RIDGE)
+Frame_Music.place(x=330, y=250, width=500, height=250)
+ 
+Button(root, text="Add Music", width=15, height=2, font=("times new roman",12,"bold"),fg="Black", bg="#21b3de",command=open_folder ).place(x=330, y=150)
+ 
+Scroll = Scrollbar(Frame_Music)
+Playlist = Listbox(Frame_Music, width=100, font=("Times new roman",10), bg="#333333", fg="grey", selectbackground="lightblue", cursor="hand2", bd=0, yscrollcommand=Scroll.set)
+Scroll.config(command=Playlist.yview)
+Scroll.pack(side=RIGHT, fill=Y)
+Playlist.pack(side=LEFT, fill=BOTH)
+ 
+root.mainloop()

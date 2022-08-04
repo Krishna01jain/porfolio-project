@@ -6,13 +6,13 @@ body {
 	padding: 0px;
 	box-sizing: border-box;
 	font-family: 'PT Sans', sans-serif;
-
+	width: 100vw;
 	/* font-size:20px; */
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	align-content: center;
-	align-items: stretch;
+	/* align-items: stretch; */
 	justify-content: center;
 	justify-content: space-around
 }
@@ -39,7 +39,7 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 	opacity: 0.1;
-	z-index: -1;
+	z-index: -10;
 }
 
 
@@ -105,7 +105,7 @@ body {
 
 .download-cv {
 	border: 3px solid rgb(55, 142, 235);
-	border-radius: 10px;
+	border-radius: 2vh;
 	padding: 20px 30px;
 	margin-left: 20px;
 	;
@@ -126,7 +126,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	border-radius: 40px;
+	border-radius: 10vh;
 	margin: 40px;
 	margin-left: 30;
 	padding-top: 50px;
@@ -141,6 +141,7 @@ body {
 	box-shadow: 1px 1px 20px 2px rgba(60, 59, 59, 0.912);
 
 	justify-content: space-around
+		/* ;z-index: -2; */
 }
 
 
@@ -152,7 +153,7 @@ body {
 	position: absolute;
 	top: 19vh;
 	left: 35vh;
-	border-radius: 5vh;
+	border-radius: 6vh;
 	/* background-color: aqua; */
 	background-image: url('images/me .jpg');
 	background-repeat: no-repeat;
@@ -168,7 +169,7 @@ body {
 	top: -8vh;
 	background: linear-gradient(to right, rgba(86, 27, 114, 0.487), rgba(80, 173, 255, 0.37));
 	box-shadow: 1px 1px 20px 2px rgba(112, 145, 255, 0.342);
-	border-radius: 20px;
+	border-radius: 7vh;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
@@ -239,10 +240,8 @@ th.table-header {
 
 }
 
-.geeks {
+/* .geeks {
 	/* caption-side: bottom;  */
-
-}
 
 /* .geeks caption img{
 	height:76px */
@@ -251,14 +250,155 @@ th.table-header {
 
 
 .container-fluid1 {
-	width: inherit;
-	height: 120vh;
-	top: -20px;
-	background: linear-gradient(to left, rgba(232, 181, 255, 0.343), rgba(143, 201, 255, 0.264));
+	width: 100%;
+	height: 140vh;
+	position: relative;
+	z-index: -2;
+	font-size: 2vh;
+	background: linear-gradient(to left, rgba(128, 45, 166, 0.316), rgba(27, 130, 226, 0.356));
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	top: 5vh;
+
+}
+
+.content p {
+	/* margin-top: 45vh; */
+	z-index: 1000;
 }
 
 .content-domain {
+	font-size: 3vh;
+	margin-top: 50vh;
+	/* margin-left: 40vw; */
+	position: relative;
+	/* top: 50vh; */
 	list-style: none;
+	align-content: center;
+	z-index: 1000;
+	display: flex;
+	flex-direction: column;
+
+	align-items: center
+}
+
+.content-domain li {
+	padding: 1vh;
+
+}
+
+
+.flex-domain-content {
+	display: flex;
+	align-items: center;
+	position: relative;
+	justify-content: center;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-content: space-around;
+
+}
+
+.flex-items {
+	position: relative;
+	margin: 5vh;
+	border-radius: 7vh;
+	width: 23vw;
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: nowrap;
+	align-content: space-between;
+}
+
+
+.flex-items::after {
+	content: '';
+	position: absolute;
+	margin: 5vh;
+	border-radius: 7vh;
+	width: 23vw;
+	height: 50vh;
+	background: linear-gradient(to left, rgba(101, 5, 146, 0.708), rgba(4, 94, 178, 0.616));
+	top: -5vh;
+	left: -5vh;
+
+
+
+}
+
+.flex-items::before {
+	content: '';
+	background: url('images/flex-item.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin: 5vh;
+	border-radius: 7vh;
+	width: 23vw;
+	height: 50vh;
+	position: absolute;
+	opacity: 0.3;
+	top: -5vh;
+	left: -5vh;
+
+}
+
+.flex-items img {
+
+	height: 12vh;
+	width: 12vh;
+	border-radius: 7vh;
+	;
+	position: absolute;
+	z-index: 1000;
+	/* left: 16vh; */
+	padding-top: 3vh;
+
+}
+
+
+.flex-items h1 {
+	position: absolute;
+	z-index: 1000;
+	/* left: 10vh;
+	top: 14vh; */
+	margin: 15vh;
+	margin-right: 16vh;
+	padding: 2vh;
+	/* 
+	margin-top: 2v; */
+	align-items: center;
+	/* padding: 3vh; */
+	font-size: 3vh;
+	/* margin-left: 3vh; */
+	/* margin-right: 3vh; */
+	align-content: center;
+}
+
+.flex-items p {
+	position: absolute;
+	top: 30vh;
+	z-index: 1000;
+	overflow-x: hidden;
+}
+
+#p-content {
+	position: absolute;
+	z-index: 1000;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	align-content: center;
 
 }
