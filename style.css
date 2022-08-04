@@ -14,7 +14,9 @@ body {
 	align-content: center;
 	/* align-items: stretch; */
 	justify-content: center;
-	justify-content: space-around
+	justify-content: space-around;
+
+
 }
 
 .container-fluid {
@@ -140,15 +142,15 @@ body {
 	justify-content: center;
 	box-shadow: 1px 1px 20px 2px rgba(60, 59, 59, 0.912);
 
-	justify-content: space-around
-		/* ;z-index: -2; */
+	justify-content: space-around;
+	z-index: 1000;
 }
 
 
 /* .my-img */
 .content-My-info::after {
 	content: '';
-	height: 75vh;
+	height: 80vh;
 	width: 25vw;
 	position: absolute;
 	top: 19vh;
@@ -251,9 +253,9 @@ th.table-header {
 
 .container-fluid1 {
 	width: 100%;
-	height: 140vh;
+	height: 180vh;
 	position: relative;
-	z-index: -2;
+	/* z-index: -1; */
 	font-size: 2vh;
 	background: linear-gradient(to left, rgba(128, 45, 166, 0.316), rgba(27, 130, 226, 0.356));
 }
@@ -274,7 +276,7 @@ th.table-header {
 
 .content-domain {
 	font-size: 3vh;
-	margin-top: 50vh;
+	margin-top: 35vh;
 	/* margin-left: 40vw; */
 	position: relative;
 	/* top: 50vh; */
@@ -308,7 +310,7 @@ th.table-header {
 	position: relative;
 	margin: 5vh;
 	border-radius: 7vh;
-	width: 23vw;
+	width: 21vw;
 	height: 50vh;
 	display: flex;
 	flex-direction: column;
@@ -316,6 +318,7 @@ th.table-header {
 	align-items: center;
 	flex-wrap: nowrap;
 	align-content: space-between;
+	box-shadow: 1px 1px 20px 2px rgba(117, 117, 117, 0.912);
 }
 
 
@@ -324,7 +327,7 @@ th.table-header {
 	position: absolute;
 	margin: 5vh;
 	border-radius: 7vh;
-	width: 23vw;
+	width: 21vw;
 	height: 50vh;
 	background: linear-gradient(to left, rgba(101, 5, 146, 0.708), rgba(4, 94, 178, 0.616));
 	top: -5vh;
@@ -342,7 +345,7 @@ th.table-header {
 	background-attachment: fixed;
 	margin: 5vh;
 	border-radius: 7vh;
-	width: 23vw;
+	width: 21vw;
 	height: 50vh;
 	position: absolute;
 	opacity: 0.3;
@@ -361,6 +364,7 @@ th.table-header {
 	z-index: 1000;
 	/* left: 16vh; */
 	padding-top: 3vh;
+	
 
 }
 
@@ -388,11 +392,16 @@ th.table-header {
 	top: 30vh;
 	z-index: 1000;
 	overflow-x: hidden;
+
 }
 
-#p-content {
+.p-content {
 	position: absolute;
-	z-index: 1000;
+	left: 80vh;
+	margin-top: 12vh;
+	font-family: 'Dancing Script', cursive;
+	font-size: 4vh;
+
 }
 
 .content {
