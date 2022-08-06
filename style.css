@@ -140,7 +140,7 @@ body {
 	align-content: center;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 1px 1px 20px 2px rgba(60, 59, 59, 0.912);
+	box-shadow: 1px 1px 20px 3px rgba(16, 16, 16, 0.692);
 
 	justify-content: space-around;
 	z-index: 1000;
@@ -161,7 +161,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: local;
-	box-shadow: 1px 1px 20px 2px rgba(60, 59, 59, 0.912);
+	box-shadow: 2px 1px 20px 2px rgba(25, 25, 25, 0.912);
 	transition: 4;
 }
 
@@ -257,7 +257,26 @@ th.table-header {
 	position: relative;
 	/* z-index: -1; */
 	font-size: 2vh;
-	background: linear-gradient(to left, rgba(128, 45, 166, 0.316), rgba(27, 130, 226, 0.356));
+	/* background: url('images/b2.jpg'); */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	/* background: linear-gradient(to left, rgba(128, 45, 166, 0.316), rgba(27, 130, 226, 0.356)); */
+}
+.container-fluid1::after {
+	content:'';
+	width: 100%;
+	height: 180vh;
+	position: absolute;
+	top:0vh;
+	opacity:0.7;
+	z-index: -2;
+	font-size: 2vh;
+	background: url('images/b3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	/* background: linear-gradient(to left, rgba(128, 45, 166, 0.316), rgba(27, 130, 226, 0.356)); */
 }
 
 .content {
@@ -311,14 +330,14 @@ th.table-header {
 	margin: 5vh;
 	border-radius: 7vh;
 	width: 21vw;
-	height: 50vh;
+	height: 45vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
 	flex-wrap: nowrap;
 	align-content: space-between;
-	box-shadow: 1px 1px 20px 2px rgba(117, 117, 117, 0.912);
+	box-shadow: 1px 1px 20px 2px rgba(35, 35, 35, 0.912);
 }
 
 
@@ -328,8 +347,8 @@ th.table-header {
 	margin: 5vh;
 	border-radius: 7vh;
 	width: 21vw;
-	height: 50vh;
-	background: linear-gradient(to left, rgba(101, 5, 146, 0.44), rgba(4, 94, 178, 0.395));
+	height: 45vh;
+	background: linear-gradient(to left, rgba(168, 116, 191, 0.45), rgba(64, 134, 225, 0.632));
 	top: -5vh;
 	left: -5vh;
 
@@ -346,7 +365,7 @@ th.table-header {
 	margin: 5vh;
 	border-radius: 7vh;
 	width: 21vw;
-	height: 50vh;
+	height: 45vh;
 	position: absolute;
 	opacity: 0.3;
 	top: -5vh;
@@ -551,7 +570,7 @@ th.table-header {
 	position: absolute;
 	opacity: 1;
 	top: -7vh;
-	left: 70vh
+	left: 65vh
 }
 
 #date {
@@ -560,7 +579,7 @@ th.table-header {
 	font-size: 2vh;
 	transform: rotate(-90deg);
 	position: absolute;
-	left: 74vh;
+	left: 69vh;
 	top: 16vh;
 
 }
@@ -597,7 +616,8 @@ th.table-header {
 	top: -28vh;
 	left: 56vh;
 	border-radius: 5vh;
-	/* background-image: url('images/i-frame1.jpg'); */
+	box-shadow: 1px 1px 19px 1px black;
+	background-image: url('images/i-frame1.jpg');
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-size: cover;
@@ -848,6 +868,23 @@ th.table-header {
 
 }
 
+
+.content4 {
+
+	position: absolute;
+	top: 0vh;
+	left: 0vh;
+	height: 140vh;
+	width: 100vh;
+	background-image:url('images/workskills.jpg');
+	border-radius: 4vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	box-shadow: 1px 1px 20px 2px rgba(29, 29, 29, 0.912);
+
+}
+
 .flex-domain-content4 {
 	display: flex;
 	align-items: center;
@@ -881,10 +918,10 @@ th.table-header {
 	position: relative;
     margin: 1vh;
     border-radius: 7vh;
-    border: 1px solid rgba(228, 224, 224, 0.213);
+    /* border: 1px solid rgba(228, 224, 224, 0.213); */
     width: 65vh;
     height: 35vh;
-    box-shadow: 1px 1px 20px 2px rgb(29 29 29 / 91%);
+    /* box-shadow: 1px 1px 20px 2px rgb(29 29 29 / 91%); */
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -918,7 +955,7 @@ margin-top:6vh;
 	height: 40vh;
 	 
 	box-shadow: 1px 1px 20px 2px rgba(29, 29, 29, 0.912);
-	background: rgb(2, 24, 149);
+	background: rgba(39, 2, 99, 0.588);
 	display: flex;
     align-items: center;
     flex-wrap: nowrap;
